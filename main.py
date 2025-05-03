@@ -63,6 +63,7 @@ def ask_openrouter(prompt: str) -> str:
         res = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=body, timeout=10)
         res.raise_for_status()
         data = res.json()
+        print("API 回應：", data)  # 印出回應內容
         return data["choices"][0]["message"]["content"]
     except Exception as e:
         print("OpenRouter 發生錯誤：", e)
