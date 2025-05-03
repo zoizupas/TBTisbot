@@ -8,7 +8,7 @@ app = FastAPI()
 TELEGRAM_API_KEY = os.getenv("TELEGRAM_API_KEY")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_API_KEY}"
-DEFAULT_MODEL = "qwen/qwen3-4b:free"
+DEFAULT_MODEL = "deepseek/deepseek-chat:free"
 
 # Telegram Webhook Endpoint
 @app.post("/webhook")
